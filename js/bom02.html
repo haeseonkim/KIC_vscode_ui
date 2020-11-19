@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+    <script type="text/javascript"> 
+        // window.open()  : 팝업의 개념
+        // open( 'url', '창이름', '옵션' );
+        
+        //open( 'https://www.daum.net' );
+
+        
+        //옵션은 아주 다양함 
+        //옵션 : top/left - 위치 , width/height - 크기 
+        
+        /*
+        let top1 = 100;
+        let left =200;
+        let width = 600;
+        let height = 800; 
+        //let option= 'top=' + top1 + 'left=' + left + 'width=' + width + 'height' + height;
+        //템플릿 문자열로 나타내기 : 백탭(`) + 변수부분(${})  ->  `top= ${top1}`  
+        let option= `top=${top1}, left=${left}, width=${width}, height= ${height}`;
+        open( './subwin.html', 'openwin', option );
+        */
+
+        // subwin.html 파일 새창에 열고 닫기 
+        let top1 = 100;
+        let left =200;
+        let width = 600;
+        let height = 800; 
+    
+        let option= `top=${top1}, left=${left}, width=${width}, height= ${height}`;
+        //open( './subwin.html', 'openwin', option );
+        let child = open( './subwin.html', 'openwin', option );  //child: 창에 대한 정보
+        
+        const moveWindow = function() {
+            //child.moveBy( 10, 10 );  //moveBy: 수평,수직으로 x,y만큼 움직인다 
+            child.moveTo( 10, 10 );  //moveTo: x,y 좌표로 이동해 
+        }
+        
+    </script>
+    <!--html에서 함수 호출법-->
+    <input type= "button" value= "클릭해" onclick="moveWindow()"/>  
+    </body>
+        
+</html>
+    

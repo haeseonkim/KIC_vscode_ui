@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+
+</head>
+
+<body>
+
+    
+    <script>
+        const gugudan = function(){
+
+            let tags = document.getElementsByClassName('cat');
+
+            let start = parseInt( document.frm.data1.value );
+            let end = parseInt( document.frm.data2.value );
+
+            let str ="";
+            
+            if(start > end){
+                window.alert( '시작과 끝을 다시 입력하세요' );
+            }
+            else{
+                
+                str += '<table border = "1">';
+                // innerHTML은 오버라이팅 구조가 아니다.
+                for(let i = start; i <= end; i++){
+                    str += '<tr>';
+                    for(let j = 1; j <= 9; j++){
+                        str += '<td>';
+                        str += (i + 'X' + j + '='+ (i*j));
+                        str += '</td>';
+                        str += '  ';
+                    }
+                    str += '<br />';
+                    str += '</tr>';
+                }
+
+                str += '</table>';
+                tags[0].innerHTML = str;
+            }
+                
+            
+
+        }
+
+    </script>
+
+    <!-- 구구단 -->
+    <form name = "frm">
+        시작단 <input type="text" name = "data1">
+        
+        ~
+        끝단 <input type="text" name = "data2">
+        <input type = "button" value = "구구단 출력" onclick = "gugudan()"/>
+        
+
+    </form>
+
+    <br/><br/><br/>
+    출력 :
+    <div class="cat"></div>
+
+
+</body>
+    
+</html>
+    

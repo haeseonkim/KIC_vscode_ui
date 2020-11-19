@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+
+    <script type="text/javascript">
+        const viewTag = function() {    // 특정한 때일 때 (버튼이나 링크처럼)
+        //window.onload = function(){   //특정한 때가 아닐때 아래의 <input>을 안쓰고 이걸 씀
+
+            // *** id로 노드 가져오기
+            // console.log(document.getElementById('first'));
+
+
+
+            // *** 요소 이름으로 노드 가져오기
+            // getElementsByTagName에서 알수있듯이 
+            // 복수로 태그이름에 해당하는 여러개의 노드를 배열형태로 가져옴.
+            // let tags = document.getElementsByTagName('div');   
+            // console.log(tags[1]);
+
+
+
+            // ***class로 노드 가져오기
+            // getElementsByClassName에서 알수있듯이 
+            // 복수로 태그이름에 해당하는 여러개의 노드를 배열형태로 가져옴.
+            let tags = document.getElementsByClassName('cat');   
+            // console.log(tags[0]);
+            
+
+
+            // HTML안의 내용을 읽기
+            //console.log(tags[0].innerHTML);   // html
+            console.log(tags[0].textContent); // text
+
+            // innerHTML와 textContent활용해서 html 바로 넣어줄수도 있다!
+            // tags[0].innerHTML = '<i> Hello div</i>';    // 이태리체로 적용되어서 나온다.
+            tags[0].textContent = '<i> Hello div</i>';   // ''안의 내용이 텍스트로 읽혀서 그대로 나온다.
+
+
+            // CSS 선택자로 노드가져오기 - 책 보고 읽어만 둬라
+        };
+        
+        
+
+    </script>
+
+    <!--특정한 때 일때-->
+    <input type = "button" value = "태그 읽기" onclick ="viewTag()"/>
+    <hr />
+
+
+    <div class = "cat" id = "first"><b>첫번째 div</b></div>
+    <div class = "cat" id = "second">두번째 div</div>
+    <div class = "cat" id = "third">세번째 div</div>
+
+
+    
+    </body>
+        
+</html>
+    

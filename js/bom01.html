@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+    <script type="text/javascript"> 
+
+        let output = '';
+        // 객체의 프로퍼티/메서드를 출력 
+        for( let key in window ) {
+            if( key != 'external' ) {
+                output += key + ':' + window[key] + '\n';
+            }
+        }
+        
+        //console.log( output )
+        
+        //screen의 위치가 나옴   // window[key] 이용
+        console.log(window[ 'screenTop' ] );   
+        console.log(window[ 'screenLeft' ] );
+        //객체식 표기법
+        console.log(window.screenTop ); 
+        console.log(window.screenLeft );
+        
+        //window 생략 
+        window.alert( '경고창' );   //-> 원칙적
+        
+
+
+    </script>
+    </body>
+        
+</html>
+    

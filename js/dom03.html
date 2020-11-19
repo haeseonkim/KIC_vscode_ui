@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+
+    <script type="text/javascript">
+
+
+        // CSS 제어하기
+        
+        const addCSS = function(){
+            let div = document.getElementById('div');
+            div.style.backgroundColor = 'pink';
+ 
+        };
+
+        const removeCSS = function(){
+            let div = document.getElementById('div');
+            div.style.backgroundColor = '';
+ 
+        };
+
+    </script>
+
+    <input type = "button" value="css 추가" onclick="addCSS()"/>
+    <input type = "button" value="css 제거" onclick="removeCSS()"/>
+
+    <hr />
+
+    <div id = "div">
+        <h1 id = "h1">Header 1</h1>
+        <h1 id = "h2">Header 2</h1>
+    </div>
+    
+    </body>
+        
+</html>
+    

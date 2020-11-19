@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+
+    <script type="text/javascript"> 
+
+        // form06.html 응용
+
+
+        const checkfrm = function() {
+            for(let i = 0; i < document.frm1.cb1.length; i++){
+                document.frm1.cb2[i].checked = document.frm1.cb1[i].checked;
+                console.log(document.frm1.cb2[i].checked);
+            }
+        };
+
+    </script>
+
+    <form name="frm1">
+    <table border = "1" width="500">
+        <tr>
+            <td>
+                <input type = "checkbox" name = "cb1" value="사과"/> 사과
+                <input type = "checkbox" name = "cb1" value="딸기"/> 딸기    
+                <input type = "checkbox" name = "cb1" value="수박"/> 수박
+
+            </td>
+            <td>
+                <input type= "button" value= "체크 복사" onclick="checkfrm()" />
+            </td>
+            <td>
+                <input type = "checkbox" name = "cb2" value="사과"/> 사과
+                <input type = "checkbox" name = "cb2" value="딸기"/> 딸기    
+                <input type = "checkbox" name = "cb2" value="수박"/> 수박
+            </td>
+        </tr>
+    </table>
+    
+    </form>
+
+    </body>
+        
+</html>
+    

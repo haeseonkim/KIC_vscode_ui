@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+
+    <script type="text/javascript">
+
+
+        // 노드 삭제하기
+        
+        const removeTag1 = function(){
+            let div = document.getElementsById('div');
+
+            // 메모리상에서 내용이 지워진다. 따라서 함수실행시 에러가 난다.
+            document.body.removeChild(div);
+        };
+
+        const removeTag2 = function(){
+            let div = document.getElementsById('div');
+            let header1 = document.getElementById('h1');
+            let header2 = document.getElementById('h2');
+            div.removeChild(header2);
+        };
+    
+    </script>
+
+    <input type = "button" value="tag 제거" onclick="removeTag()"/>
+
+    <hr />
+
+    <div id = "div">
+        <h1 id = "h1">Header 1</h1>
+        <h1 id = "h2">Header 2</h1>
+    </div>
+    
+    </body>
+        
+</html>
+    

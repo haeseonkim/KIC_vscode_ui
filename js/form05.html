@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+
+    <script type="text/javascript"> 
+    
+       const checkfrm = function() {
+        //    // 체크된 상태값 확인
+        //     console.log(document.frm1.cb1.checked); 
+        //     console.log(document.frm1.cb2.checked);
+        //     console.log(document.frm1.cb3.checked);
+
+        //     // 체크된 상태와 관계없이 value를 다 가져온다. 
+        //     console.log(document.frm1.cb1.value); 
+        //     console.log(document.frm1.cb2.value);
+        //     console.log(document.frm1.cb3.value);
+
+        //     // checked가 true일 때만 value값을 가져오는 식
+            
+            if(document.frm1.cb1.checked) console.log(document.frm1.cb1.value); 
+            if(document.frm1.cb2.checked) console.log(document.frm1.cb2.value); 
+            if(document.frm1.cb3.checked) console.log(document.frm1.cb3.value); 
+            // for문으로 form06.html에서 구현
+            
+       };
+
+    </script>
+
+    <form action= "test1.html" name="frm1">
+    <input type = "checkbox" name = "cb1" value="사과"/> 사과
+    <input type = "checkbox" name = "cb2" value="딸기" checked/> 딸기     <!--디폴트 체크상태 : checked-->
+    <input type = "checkbox" name = "cb3" value="수박"/> 수박
+    <input type= "button" value= "결과" onclick="checkfrm()" />
+    </form>
+
+    </body>
+        
+</html>
+    

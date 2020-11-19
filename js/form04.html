@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+
+    <script type="text/javascript"> 
+    
+       const checkfrm = function() {
+           // 자료형 조심
+            let num1 = parseInt( document.frm1.data1.value );
+            let num2 = parseInt( document.frm1.data2.value );
+            // let result = num1 + num2;
+            // document.frm1.result.value = result;
+            
+
+            // select로 풀기 1
+            
+            // let result = 0;
+
+            // if(document.frm1.oper.options[document.frm1.oper.options.selectedIndex].value == "+"){
+            //     result = num1 + num2;
+            // }else if(document.frm1.oper.options[document.frm1.oper.options.selectedIndex].value == "-"){
+            //     result = num1 - num2;
+            // }else if(document.frm1.oper.options[document.frm1.oper.options.selectedIndex].value == "/"){
+            //     result = num1 / num2;
+            // }else {
+            //     result = num1 * num2;
+            // }
+            
+
+            // select로 풀기 2
+
+            // let result = 0;
+
+            // if(document.frm1.oper.options.selectedIndex == 0){
+            //     result = num1 + num2;
+            // }else if(document.frm1.oper.options.selectedIndex == 1){
+            //     result = num1 - num2;
+            // }else if(document.frm1.oper.options.selectedIndex == 2){
+            //     result = num1 / num2;
+            // }else {
+            //     result = num1 * num2;
+            // }
+
+            // select로 풀기 3 - eval() 함수 활용
+
+            let oper = document.frm1.oper.value;
+
+            let result = eval( num1 + ' ' + oper + ' ' + num2 );
+
+            document.frm1.result.value = result;
+            
+
+       };
+
+    </script>
+    <form action= "test1.html" name="frm1">
+    <input type= "text" name="data1" />
+    <select name = "oper">
+        <option value = "+" selected>+</option >    <!--기본값은 selected-->
+        <option value = "-">-</option>
+        <option value = "/">/</option>
+        <option value = "*">*</option>
+    </select>
+    <input type= "text" name= "data2" />
+    <input type= "button" value= "결과" onclick="checkfrm()" />
+    <input type= "text" name= "result" />
+    </form>
+    </body>
+        
+</html>
+    

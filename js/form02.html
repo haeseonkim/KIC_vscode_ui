@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+  
+    </head>
+
+    <body>
+    <script type="text/javascript">
+ 
+
+        // <form></form>을 자바스크립트 아래 쓰면 2가지 방법으로 
+    
+        // 문서를 이벤트라 하는데 문서를 전체적으로 읽어서 메모리(dom)화 시킨 후에 
+        window.onload = function() {
+            console.log( typeof document.frm1.action );    
+        };
+
+        const checkfrm = function() {
+            console.log( typeof document.frm1.action );    
+        };
+        
+
+       
+    
+    </script>
+    <form action = "test3.html" name= "frm1">
+    <input type="button" value="form문 읽기" onclick="checkfrm()" />  <!--이 방법을 더 많이 씀-->
+    </form>
+
+    <a href="javascript:checkfrm()">form문 읽기</a>
+    </body>
+        
+</html>
+    

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+
+    </script>
+    </head>
+
+    <body>
+    <script type="text/javascript"> 
+        // 5초 후에 자동적으로 m.daum.net 페이지가 열리는 함수 autoopenWindow() 만들기
+        
+        /* 
+        // 사용자 정의함수 
+        const autoopenWindow = function() {
+            alert( '함수 호출' );
+        }
+        */
+
+        const autoopenWindow = function() {
+            setTimeout( function() {
+                let option = 'top=100, letf=300, width=600, height=800';
+                open( 'https://m.daum.net' , 'openwin', option);   
+            }, 5000);                               
+        }
+        
+        
+    </script>
+    <!-- Html에서 자바스크립트 함수 호출방법-->
+    <!--1. 링크 걸어서  or 버튼 사용-->
+    <input type= "button" value= "함수 호출" onclick="autoopenWindow()"/> 
+     
+    </body>
+        
+</html>
+    
